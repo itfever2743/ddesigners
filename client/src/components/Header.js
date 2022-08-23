@@ -21,7 +21,7 @@ const Header = () => {
       console.log('');
     } else {
       setUserName(data.name);
-      setCheck(true);
+      setCheck(false);
       dispatch({ type: 'USER', payload: true });
     }
   };
