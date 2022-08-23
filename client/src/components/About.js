@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Images from './ProjectImages';
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../App';
 const About = () => {
   const navigate = useNavigate();
   const [userData, setUserData] = useState({});
@@ -19,6 +20,7 @@ const About = () => {
 
     const data = await res.json();
     setUserData(data);
+    dispatch({ type: 'USER', payload: true });
     if (data.status === 400) {
       navigate('/login');
     }

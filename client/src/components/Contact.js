@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Images from './ProjectImages';
+import { UserContext } from '../App';
 
 const Contact = () => {
   const [userData, setUserData] = useState({
@@ -29,6 +30,8 @@ const Contact = () => {
     });
     if (data.status === 400) {
       console.log('');
+    } else {
+      dispatch({ type: 'USER', payload: true });
     }
   };
   let name, value;

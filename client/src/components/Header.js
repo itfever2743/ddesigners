@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Images from './ProjectImages';
+import { UserContext } from '../App';
+
 const Header = () => {
   const [userName, setUserName] = useState('');
   const [check, setCheck] = useState(false);
@@ -16,6 +18,7 @@ const Header = () => {
     const data = await res.json();
     setUserName(data.name);
     setCheck(true);
+    dispatch({ type: 'USER', payload: true });
   };
 
   useEffect(() => {
