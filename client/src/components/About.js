@@ -20,10 +20,11 @@ const About = () => {
     });
 
     const data = await res.json();
-    setUserData(data);
-    dispatch({ type: 'USER', payload: true });
     if (data.status === 400) {
       navigate('/login');
+    } else {
+      setUserData(data);
+      dispatch({ type: 'USER', payload: true });
     }
   };
 

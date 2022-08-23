@@ -17,9 +17,13 @@ const Header = () => {
     });
 
     const data = await res.json();
-    setUserName(data.name);
-    setCheck(true);
-    dispatch({ type: 'USER', payload: true });
+    if (data) {
+      setUserName(data.name);
+      setCheck(true);
+      dispatch({ type: 'USER', payload: true });
+    } else {
+      console.log('');
+    }
   };
 
   useEffect(() => {
