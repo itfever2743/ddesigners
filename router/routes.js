@@ -118,6 +118,6 @@ router.get('/logout', (req, res) => {
 
 app.get('/*', (req, res) => {
   const path = require('path');
-  res.sendFile(path.join(__dirname, '/client/build/'));
+  res.sendFile(path.join(__dirname, '/client/build/index.html'));
 });
 module.exports = router;
