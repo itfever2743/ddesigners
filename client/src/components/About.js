@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import Images from './ProjectImages';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../App';
