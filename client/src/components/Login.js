@@ -37,11 +37,10 @@ const Login = () => {
         const data = await res.json();
         if (data.status === 400) {
           setMessage(data.message);
-        } else {
-          setMessage(data.message);
-          dispatch({ type: 'USER', payload: true });
-          navigate('/');
         }
+        setMessage(data.message);
+        dispatch({ type: 'USER', payload: true });
+        navigate('/');
       }
     } catch (err) {
       setMessage(err);
