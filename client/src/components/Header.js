@@ -17,12 +17,12 @@ const Header = () => {
     });
 
     const data = await res.json();
-    if (data) {
+    if (data.status === 400) {
+      console.log('');
+    } else {
       setUserName(data.name);
       setCheck(true);
       dispatch({ type: 'USER', payload: true });
-    } else {
-      console.log('');
     }
   };
 
