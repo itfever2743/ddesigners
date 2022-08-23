@@ -10,6 +10,8 @@ const Contact = () => {
     message: '',
   });
 
+  const { state, dispatch } = useContext(UserContext);
+
   const [message, setMessage] = useState('');
   // ########### Getting Data #############
   const ContactData = async () => {

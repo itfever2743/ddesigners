@@ -5,6 +5,7 @@ import { UserContext } from '../App';
 const About = () => {
   const navigate = useNavigate();
   const [userData, setUserData] = useState({});
+  const { state, dispatch } = useContext(UserContext);
 
   const { _id, name, email, phone, work } = userData;
 
