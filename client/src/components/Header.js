@@ -4,7 +4,7 @@ import { UserContext } from '../App';
 
 const Header = () => {
   const [userName, setUserName] = useState('');
-  const [check, setCheck] = useState(false);
+  const [check, setCheck] = useState(true);
   const { state, dispatch } = useContext(UserContext);
 
   const HeaderData = async () => {
