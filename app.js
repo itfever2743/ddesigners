@@ -20,6 +20,10 @@ if (process.env.NODE_ENV == 'production') {
   app.use(express.static('client/build'));
 }
 
+app.get('/*', (req, res) => {
+  const path = require('path');
+  res.sendFile(path.join(__dirname, '/client/build/index.html'));
+});
 app.listen(PORTS, () => {
   console.log(`Server Running at port ${PORTS}`);
 });

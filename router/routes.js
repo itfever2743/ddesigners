@@ -116,8 +116,4 @@ router.get('/logout', (req, res) => {
   res.status(200).json({ status: 200 });
 });
 
-router.get('/*', (req, res) => {
-  const path = require('path');
-  res.sendFile(path.join(__dirname, '/client/build/index.html'));
-});
 module.exports = router;
